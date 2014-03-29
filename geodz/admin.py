@@ -1,9 +1,9 @@
 from django.contrib import admin
 from django.utils.html import format_html
+from django.utils.translation import ugettext_lazy as _
 from django.templatetags.static import static
 
 from models import Municipality, Province
-
 
 class GeodzModelAdmin(admin.ModelAdmin):
 
@@ -17,7 +17,7 @@ class GeodzModelAdmin(admin.ModelAdmin):
         )
 
     google_maps.allow_tags = True
-
+    google_maps.short_description = _('Google Maps')
 
 class MunicipalityAdmin(GeodzModelAdmin):
     list_display = ('name', 'province', 'google_maps')
@@ -31,6 +31,8 @@ class ProvinceAdmin(GeodzModelAdmin):
 
     def municipality_count(self, obj):
         return obj.municipalities.count()
+
+    municipality_count.short_description = _('Municipality Count')
 
 admin.site.register(Municipality, MunicipalityAdmin)
 admin.site.register(Province, ProvinceAdmin)

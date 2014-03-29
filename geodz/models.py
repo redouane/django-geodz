@@ -1,15 +1,15 @@
 from django.db import models
 from django.conf import settings
+from django.utils.translation import ugettext_lazy as _
 
 class Province(models.Model):
-    ### wilaya ###
 
     class Meta:
         verbose_name = 'Province'
         verbose_name_plural = 'Provinces'
         ordering = ['id']
 
-    name = models.CharField('Name', max_length=255)
+    name = models.CharField(_('Name'), max_length=255)
     code = models.CharField('Code', max_length=2)
 
     #geo coords
@@ -25,14 +25,13 @@ class Province(models.Model):
         return self.name
 
 class Municipality(models.Model):
-    ### commune ###
 
     class Meta:
-        verbose_name = 'Municipality'
-        verbose_name_plural = 'Municipalities'
+        verbose_name = _('Municipality')
+        verbose_name_plural = _('Municipalities')
         ordering = ['province']
 
-    name = models.CharField('Name', max_length=255)
+    name = models.CharField(_('Name'), max_length=255)
 
     #geo coords
     longitude = models.FloatField(blank=True, null=True)
