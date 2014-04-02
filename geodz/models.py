@@ -1,6 +1,7 @@
 from django.db import models
 from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
+from geoposition.fields import GeopositionField
 
 class Province(models.Model):
 
@@ -13,8 +14,7 @@ class Province(models.Model):
     code = models.CharField('Code', max_length=2)
 
     #geo coords
-    longitude = models.FloatField(blank=True, null=True)
-    latitude = models.FloatField(blank=True, null=True)
+    position = GeopositionField(blank=True, null=True)
 
 
     def get_gmaps_query_url(self):
@@ -34,8 +34,7 @@ class Municipality(models.Model):
     name = models.CharField(_('Name'), max_length=255)
 
     #geo coords
-    longitude = models.FloatField(blank=True, null=True)
-    latitude = models.FloatField(blank=True, null=True)
+    position = GeopositionField(blank=True, null=True)
 
     #fk
     province = models.ForeignKey(Province, related_name='municipalities')

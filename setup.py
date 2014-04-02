@@ -17,7 +17,7 @@ setup(
     url='https://www.github.com/redouane/django-geodz',
     author='Redouane Zait',
     author_email='redouanezait@gmail.com',
-    install_requires=['Django'],
+    install_requires=['Django', 'django-geoposition'],
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',

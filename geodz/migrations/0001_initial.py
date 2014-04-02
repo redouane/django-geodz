@@ -13,8 +13,7 @@ class Migration(SchemaMigration):
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('name', self.gf('django.db.models.fields.CharField')(max_length=255)),
             ('code', self.gf('django.db.models.fields.CharField')(max_length=2)),
-            ('longitude', self.gf('django.db.models.fields.FloatField')(null=True, blank=True)),
-            ('latitude', self.gf('django.db.models.fields.FloatField')(null=True, blank=True)),
+            ('position', self.gf('geoposition.fields.GeopositionField')(default='0,0', max_length=42, null=True, blank=True)),
         ))
         db.send_create_signal(u'geodz', ['Province'])
 
@@ -22,8 +21,7 @@ class Migration(SchemaMigration):
         db.create_table(u'geodz_municipality', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('name', self.gf('django.db.models.fields.CharField')(max_length=255)),
-            ('longitude', self.gf('django.db.models.fields.FloatField')(null=True, blank=True)),
-            ('latitude', self.gf('django.db.models.fields.FloatField')(null=True, blank=True)),
+            ('position', self.gf('geoposition.fields.GeopositionField')(default='0,0', max_length=42, null=True, blank=True)),
             ('province', self.gf('django.db.models.fields.related.ForeignKey')(related_name='municipalities', to=orm['geodz.Province'])),
         ))
         db.send_create_signal(u'geodz', ['Municipality'])
@@ -39,20 +37,18 @@ class Migration(SchemaMigration):
 
     models = {
         u'geodz.municipality': {
-            'Meta': {'object_name': 'Municipality'},
+            'Meta': {'ordering': "['province']", 'object_name': 'Municipality'},
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'latitude': ('django.db.models.fields.FloatField', [], {'null': 'True', 'blank': 'True'}),
-            'longitude': ('django.db.models.fields.FloatField', [], {'null': 'True', 'blank': 'True'}),
             'name': ('django.db.models.fields.CharField', [], {'max_length': '255'}),
+            'position': ('geoposition.fields.GeopositionField', [], {'default': "'0,0'", 'max_length': '42', 'null': 'True', 'blank': 'True'}),
             'province': ('django.db.models.fields.related.ForeignKey', [], {'related_name': "'municipalities'", 'to': u"orm['geodz.Province']"})
         },
         u'geodz.province': {
-            'Meta': {'object_name': 'Province'},
+            'Meta': {'ordering': "['id']", 'object_name': 'Province'},
             'code': ('django.db.models.fields.CharField', [], {'max_length': '2'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'latitude': ('django.db.models.fields.FloatField', [], {'null': 'True', 'blank': 'True'}),
-            'longitude': ('django.db.models.fields.FloatField', [], {'null': 'True', 'blank': 'True'}),
-            'name': ('django.db.models.fields.CharField', [], {'max_length': '255'})
+            'name': ('django.db.models.fields.CharField', [], {'max_length': '255'}),
+            'position': ('geoposition.fields.GeopositionField', [], {'default': "'0,0'", 'max_length': '42', 'null': 'True', 'blank': 'True'})
         }
     }
 
