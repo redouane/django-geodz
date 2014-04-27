@@ -50,7 +50,7 @@
         "fields": {
             "position": "36.75,5.0666667", 
             "code": "6", 
-            "name": "Beja\u00c3\u00afa"
+            "name": "Bejaîa"
         }
     }, 
     {
@@ -68,7 +68,7 @@
         "fields": {
             "position": "31.608219,-2.220005", 
             "code": "8", 
-            "name": "B\u00c3\u00a9char"
+            "name": "Béchar"
         }
     }, 
     {
@@ -104,7 +104,7 @@
         "fields": {
             "position": "35.407139,8.120864", 
             "code": "12", 
-            "name": "T\u00c3\u00a9bessa"
+            "name": "Tébessa"
         }
     }, 
     {
@@ -167,7 +167,7 @@
         "fields": {
             "position": "36.18898,5.414416", 
             "code": "19", 
-            "name": "S\u00c3\u00a9tif"
+            "name": "Sétif"
         }
     }, 
     {
@@ -176,7 +176,7 @@
         "fields": {
             "position": "34.840752,0.149473", 
             "code": "20", 
-            "name": "Sa\u00c3\u00afda"
+            "name": "Saîda"
         }
     }, 
     {
@@ -194,7 +194,7 @@
         "fields": {
             "position": "35.2,-0.6333333", 
             "code": "22", 
-            "name": "Sidi bel Abb\u00c3\u00abs"
+            "name": "Sidi bel Abbès"
         }
     }, 
     {
@@ -230,7 +230,7 @@
         "fields": {
             "position": "36.2666667,2.75", 
             "code": "26", 
-            "name": "M\u00c3\u00a9d\u00c3\u00a9a"
+            "name": "Médéa"
         }
     }, 
     {
@@ -302,7 +302,7 @@
         "fields": {
             "position": "36.0711916,4.7588042", 
             "code": "34", 
-            "name": "Bordj Bou Arr\u00c3\u00a9ridj"
+            "name": "Bordj Bou Arréridj"
         }
     }, 
     {
@@ -392,7 +392,7 @@
         "fields": {
             "position": "36.0729193,1.9881527", 
             "code": "44", 
-            "name": "A\u00c3\u00afn Defla"
+            "name": "Aîn Defla"
         }
     }, 
     {
@@ -410,7 +410,7 @@
         "fields": {
             "position": "35.30241,-1.14489", 
             "code": "46", 
-            "name": "A\u00c3\u00afn Temouchent"
+            "name": "Aîn Temouchent"
         }
     }, 
     {
@@ -419,7 +419,7 @@
         "fields": {
             "position": "32.489059,3.678539", 
             "code": "47", 
-            "name": "Gharda\u00c3\u00afa"
+            "name": "Ghardaîa"
         }
     }, 
     {
@@ -2020,7 +2020,7 @@
         "model": "geodz.municipality", 
         "fields": {
             "province": 6, 
-            "name": "Bejaia", 
+            "name": "Béjaïa", 
             "position": "5.0666667,36.75"
         }
     }, 
@@ -2857,7 +2857,7 @@
         "model": "geodz.municipality", 
         "fields": {
             "province": 8, 
-            "name": "Mechraa Houari Boum\u00c3\u00a9dienne", 
+            "name": "Mechraa Houari Boumédienne", 
             "position": "-2.220005,31.608219"
         }
     }, 
@@ -12154,7 +12154,7 @@
         "model": "geodz.municipality", 
         "fields": {
             "province": 39, 
-            "name": "El M\u00e2\u20ac\u2122ghair", 
+            "name": "El M'ghair", 
             "position": "6.867369,33.368309"
         }
     }, 
@@ -14017,7 +14017,7 @@
         "model": "geodz.municipality", 
         "fields": {
             "province": 48, 
-            "name": "Sidi M\u00e2\u20ac\u2122hamed Benali", 
+            "name": "Sidi M'hamed Benali", 
             "position": "0.853285,36.146431"
         }
     }, 
@@ -14107,7 +14107,7 @@
         "model": "geodz.municipality", 
         "fields": {
             "province": 48, 
-            "name": "Sidi M\u00e2\u20ac\u2122hamed Benouda", 
+            "name": "Sidi M'hamed Benouda", 
             "position": "0.58,35.6"
         }
     }, 
