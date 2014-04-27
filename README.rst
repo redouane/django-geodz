@@ -1,11 +1,22 @@
 ============
-Django-Geodz
+django-geodz
 ============
 
 django-geodz is a simple django app that provides out of the box algerian province and municipality
-models and their respective data fixtures
+models and their respective data fixtures.
 
 you can use it for your own algeria-related projects
+
+also included:
+
+- admin support
+- fr locale translation
+
+
+Requirements
+------------
+
+- django-geoposition
 
 Quick start
 -----------
@@ -17,4 +28,9 @@ Quick start
         'geodz',
     )
 
-2. Run `python manage.py migrate` to create/migrate the models and data fixtures.
+2. Run `python manage.py migrate` to create/migrate the models and load the data fixtures.
+3. use the provided models::
+
+    from geodz.models import Province, Municipality
+
+3. Profit !!!!
