@@ -2,6 +2,17 @@
 django-geodz
 ============
 
+.. image:: https://badge.fury.io/py/django-geodz.svg
+    :target: http://badge.fury.io/py/django-geodz
+
+.. image:: https://pypip.in/download/django-geodz/badge.png
+    :target: https://pypi.python.org/pypi/django-gedz/
+    :alt: Downloads
+
+.. image:: https://pypip.in/license/django-geodz/badge.png
+    :target: https://pypi.python.org/pypi/django-geodz/
+    :alt: License
+
 django-geodz is a simple django app that provides out of the box algerian province and municipality
 models and their respective data fixtures.
 
