@@ -6,7 +6,7 @@ django-geodz
     :target: http://badge.fury.io/py/django-geodz
 
 .. image:: https://pypip.in/download/django-geodz/badge.png
-    :target: https://pypi.python.org/pypi/django-gedz/
+    :target: https://pypi.python.org/pypi/django-geodz/
     :alt: Downloads
 
 .. image:: https://pypip.in/license/django-geodz/badge.png
