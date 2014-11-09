@@ -22,11 +22,10 @@ also included:
 
 - admin support
 - fr locale translation
-
+- support for both django 1.7 migrations, aswell as south migrations (requires atleast south 1.0)
 
 Requirements
 ------------
-
 - django-geoposition
 
 Quick start
