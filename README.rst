@@ -35,6 +35,7 @@ Quick start
 
     INSTALLED_APPS = (
         ...
+        'geoposition',
         'geodz',
     )
 
