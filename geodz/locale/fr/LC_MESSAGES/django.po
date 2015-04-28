@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-29 15:54+0100\n"
+"POT-Creation-Date: 2015-04-29 00:18+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,18 +22,34 @@ msgstr ""
 msgid "Google Maps"
 msgstr ""
 
-#: admin.py:35
+#: admin.py:29
+msgid "Province count"
+msgstr "Nombre de provinces"
+
+#: admin.py:46
 msgid "Municipality Count"
 msgstr "Nombre de communes"
 
-#: models.py:12 models.py:34
+#: apps.py:6
+msgid "Geo DZ"
+msgstr ""
+
+#: models.py:9 models.py:30
+msgid "Region"
+msgstr "Région"
+
+#: models.py:10
+msgid "Regions"
+msgstr "Régions"
+
+#: models.py:24 models.py:46
 msgid "Name"
 msgstr "Nom"
 
-#: models.py:30
+#: models.py:42
 msgid "Municipality"
 msgstr "Commune"
 
-#: models.py:31
+#: models.py:43
 msgid "Municipalities"
 msgstr "Communes"

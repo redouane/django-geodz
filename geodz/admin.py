@@ -3,7 +3,7 @@ from django.utils.html import format_html
 from django.utils.translation import ugettext_lazy as _
 from django.templatetags.static import static
 
-from models import Municipality, Province
+from models import Region, Province, Municipality
 
 class GeodzModelAdmin(admin.ModelAdmin):
 
@@ -19,13 +19,24 @@ class GeodzModelAdmin(admin.ModelAdmin):
     google_maps.allow_tags = True
     google_maps.short_description = _('Google Maps')
 
+class RegionAdmin(admin.ModelAdmin):
+
+    list_display = ('name', 'province_count')
+
+    def province_count(self, obj):
+        return obj.provinces.count()
+
+    province_count.short_description = _('Province count')
+
 class MunicipalityAdmin(GeodzModelAdmin):
+
     list_display = ('name', 'province', 'google_maps')
     list_filter = ('province',)
     search_fields = ('name',)
 
 class ProvinceAdmin(GeodzModelAdmin):
-    list_display = ('code', 'name', 'municipality_count', 'google_maps')
+
+    list_display = ('code', 'name', 'region', 'municipality_count', 'google_maps')
     list_display_links = ('name',)
     search_fields = ('name', 'code',)
 
@@ -34,5 +45,6 @@ class ProvinceAdmin(GeodzModelAdmin):
 
     municipality_count.short_description = _('Municipality Count')
 
-admin.site.register(Municipality, MunicipalityAdmin)
+admin.site.register(Region, RegionAdmin)
 admin.site.register(Province, ProvinceAdmin)
+admin.site.register(Municipality, MunicipalityAdmin)

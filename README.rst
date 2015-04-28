@@ -45,3 +45,14 @@ Quick start
     from geodz.models import Province, Municipality
 
 3. Profit !!!!
+
+
+Changelog
+---------
+
+April 25th, 2015
+----------------
+- new `Region` model
+- provinces now have a one-to many foreign key to regions
+- initial data fixture updated
+- south migrations deprecated / no longer supported / kept as is
