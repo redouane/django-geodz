@@ -43,7 +43,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='municipality',
             name='province',
-            field=models.ForeignKey(related_name='municipalities', to='geodz.Province'),
+            field=models.ForeignKey(related_name='municipalities', to='geodz.Province', null=True, on_delete=models.SET_NULL),
             preserve_default=True,
         ),
     ]

@@ -11,7 +11,7 @@ class Region(models.Model):
 
     name = models.CharField(max_length=255)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
 class Province(models.Model):
@@ -27,13 +27,13 @@ class Province(models.Model):
 
     #fk
     region = models.ForeignKey(Region, related_name='provinces',
-        verbose_name=_('Region'), null=True)
+        verbose_name=_('Region'), null=True, on_delete=models.SET_NULL)
 
     def get_gmaps_query_url(self):
         url = getattr(settings, 'GEODZ_GMAPS_QUERY_URL', 'http://maps.google.com/?q=')
         return '%s%s' % (url, self.name)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
 class Municipality(models.Model):
@@ -49,11 +49,11 @@ class Municipality(models.Model):
     position = GeopositionField(blank=True, null=True)
 
     #fk
-    province = models.ForeignKey(Province, related_name='municipalities')
+    province = models.ForeignKey(Province, related_name='municipalities', null=True, on_delete=models.SET_NULL)
 
     def get_gmaps_query_url(self):
         url = getattr(settings, 'GEODZ_GMAPS_QUERY_URL', 'http://maps.google.com/?q=')
         return '%s%s, %s' % (url, self.name, self.province)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name

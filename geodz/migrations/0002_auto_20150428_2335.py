@@ -25,6 +25,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='province',
             name='region',
-            field=models.ForeignKey(related_name='provinces', verbose_name='Region', to='geodz.Region', null=True),
+            field=models.ForeignKey(related_name='provinces', verbose_name='Region', to='geodz.Region', null=True, on_delete=models.SET_NULL),
         ),
     ]

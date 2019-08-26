@@ -3,7 +3,7 @@ from django.utils.html import format_html
 from django.utils.translation import ugettext_lazy as _
 from django.templatetags.static import static
 
-from models import Region, Province, Municipality
+from .models import Region, Province, Municipality
 
 class GeodzModelAdmin(admin.ModelAdmin):
 
